@@ -1,0 +1,50 @@
+/**
+ *
+ * Type your custom styles
+ *
+ */
+
+
+
+/**
+ * Additional styles for Anime demo
+ */
+/* Site Background */
+body:after {
+    content: '';
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('../images/site-background.jpg');
+    background-size: cover;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    z-index: -1;
+}
+.content-wrap {
+    background: rgba(15, 15, 15, 0.9);
+}
+
+/* Boxed container */
+.content-wrap {
+    max-width: 1240px;
+}
+.navbar-brand img, .navbar-nav li a img {
+  width: 100%; /* Ajusta el tamaño de la imagen al 100% del contenedor */
+  height: auto; /* Mantén la proporción de la imagen */
+  max-width: 150px; /* Limita el tamaño máximo a 150px de ancho */
+}
+/* Hacer todo el texto más negrita */
+* {
+    font-weight: bold; /* Aplica negrita a todo el texto */
+    color: #101010; /* Color del texto */
+}
+
+/* Aplicar una sombra más oscura y definida */
+* {
+    color: white; /* Color del texto */
+    text-shadow: 2px 2px 6px rgb(0, 0, 0); /* Sombra más oscura y más definida */
+}
+
