@@ -94,6 +94,68 @@
             background: #9146ff !important;
             border: none;
         }
+         .youplay-banner {
+            position: relative;
+            overflow: hidden;
+            min-height: 100vh;
+        }
+
+        .youplay-banner-parallax {
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .youplay-banner .image {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .youplay-banner .info {
+            position: relative;
+            z-index: 1;
+            padding: 100px 0;
+        }
+
+        .mt-60 {
+            margin-top: 60px;
+        }
+           /* Nuevos estilos para el texto con efecto nube */
+        .text-cloud {
+            background: rgba(25, 25, 25, 0.85);
+            border-radius: 20px;
+            padding: 2rem;
+            position: relative;
+            backdrop-filter: blur(5px);
+            border: 2px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            margin: 2rem 0;
+        }
+
+        .text-cloud::after {
+            content: '';
+            position: absolute;
+            bottom: -20px;
+            left: 50%;
+            transform: translateX(-50%);
+            border-width: 20px 25px 0;
+            border-style: solid;
+            border-color: rgba(25, 25, 25, 0.85) transparent transparent;
+            filter: drop-shadow(0 5px 5px rgba(0,0,0,0.1));
+        }
+
+        .text-cloud blockquote {
+            background: transparent !important;
+            border: none !important;
+            padding: 0 !important;
+        }
     </style>
 </head>
 
@@ -179,26 +241,58 @@
         </div>
     </section>
 
-    <!-- Sección Información -->
-    <section id="info" class="py-5 bg-secondary">
+<!-- Sección Información Actualizada CORREGIDA -->
+<section id="info" class="youplay-banner youplay-banner-parallax mt-60">
+    <div class="image" style="background-image: url('assets/images/as.jpeg')"></div>
+    <div class="info">
         <div class="container">
-            <h2 class="text-center mb-5 display-5">Información del Gremio</h2>
-            <div class="row g-4">
-                <div class="col-lg-6">
-                    <div class="testimonial-block p-4">
-                        <h3>¡Únete a Nosotros!</h3>
-                        <p>Comunidad activa con enfoque en PvE y crecimiento colectivo. Respeto y compañerismo como valores principales.</p>
-                    </div>
-                </div>
-                <div class="col-lg-6">
-                    <div class="testimonial-block p-4">
-                        <h3>Código del Guerrero</h3>
-                        <p>Honor en la batalla, lealtad al gremio, mejora constante.</p>
+            <div class="row testimonials">
+                <div class="col-md-10 mx-auto">
+                    <div class="text-cloud">
+                        <h2 class="text-center text-white mb-4">INFORMACIÓN</h2>
+                        
+                        <!-- Primer Blockquote -->
+                        <blockquote>
+                            <h3>¡Únete al Gremio Saqar!</h3>
+                            <p>¿Estás buscando un lugar donde crecer, divertirte y vivir aventuras épicas? <strong>Saqar</strong> te abre sus puertas. Aquí no importa tu nivel, lo importante es tu actitud y ganas de formar parte de una verdadera hermandad. 💪</p>
+                            <p>
+                                <strong>¿Qué ofrecemos?</strong><br>
+                                🎉 <strong>Eventos de gremio:</strong> Participa en actividades emocionantes junto a tus compañeros.<br>
+                                🛡️ <strong>Crecimiento constante:</strong> Aprende y mejora con el apoyo de todos.<br>
+                                🐉 <strong>Bosses de gremio:</strong> Cada sábado o domingo enfrentamos a los jefes más desafiantes del juego.
+                            </p>
+                            <p>
+                                <strong>¿Qué buscamos?</strong><br>
+                                - Respetar a tus compañeros de gremio.<br>
+                                - Disfrutar del PvE y colaborar en equipo.<br>
+                                - ¡Ser parte activa de nuestras aventuras!
+                            </p>
+                            <p>
+                                🌐 <strong>¡No lo pienses más!</strong> Forma parte de <strong>Saqar</strong>, donde las leyendas nacen. Escríbenos y únete a nuestra comunidad hoy. 🖤✨
+                            </p>
+                        </blockquote> <!-- CIERRE FALTANTE AQUÍ -->
+
+                        <!-- Segundo Blockquote -->
+                        <blockquote>
+                            <h3>Código del Guerrero</h3>
+                            <p>Honor y respeto entre hermanos de armas<br>
+                            Victoria a través de la estrategia y unidad<br>
+                            Gloria compartida en cada batalla</p>
+                        </blockquote>
+                        
+                        <!-- Tercer Blockquote -->
+                        <blockquote>
+                            <h3>Rutas del Destino</h3>
+                            <p>Misiones épicas y eventos legendarios<br>
+                            Entrenamiento y mejora constante<br>
+                            Exploración de tierras misteriosas</p>
+                        </blockquote>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
     <!-- Sección Ayuda -->
     <section id="ayuda" class="py-5">
